@@ -1,0 +1,65 @@
+ip add 172.16.3.146 255.255.255.252
+no sh
+
+ex
+
+interface GigabitEthernet0/1
+ip add 172.16.3.154 255.255.255.252
+no sh
+
+ex
+
+int se0/2/0
+clock rate 64000
+ip add 195.136.17.1 255.255.255.252
+no sh
+ex
+
+int se0/2/1
+clock rate 64000
+ip add 195.136.17.5 255.255.255.252
+no sh
+ex
+
+
+do wr
+
+
+
+CORE R2
+
+ip add 172.16.3.150 255.255.255.252
+no sh
+
+ex
+
+interface GigabitEthernet0/1
+ip add 172.16.3.158 255.255.255.252
+no sh
+
+ex
+
+int se0/2/0
+clock rate 64000
+ip add 195.136.17.9 255.255.255.252
+no sh
+ex
+
+int se0/2/1
+clock rate 64000
+ip add 195.136.17.13 255.255.255.252
+no sh
+
+do wr
+
+ex
+
+
+
+
+
+
+
+
+
+
