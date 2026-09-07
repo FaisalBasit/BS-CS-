@@ -1,0 +1,63 @@
+.MODEL SMALL
+.STACK 100H
+.DATA    H
+
+
+INPUT DB "INPUT A NUMBER: $"
+EVEN  DB 0AH,0DH, "NUMBER IS EVEN$"
+ODD   DB 0AH,0DH, "NUMBER IS ODD$"
+DATA1 DB 10 DUP('?')
+
+
+.CODE
+MAIN PROC
+    MOV AX,@DATA
+    MOV DS,AX
+    
+    MOV AH,9
+    LEA DX,INPUT
+    INT 21H
+    
+    MOV SI,OFFSET DATA1
+
+INPUT1:
+    MOV AH,1
+    INT 21H
+    
+    CMP AL,0DH
+    JE CHECK
+    
+    MOV [SI],AL
+    INC SI
+    
+    JMP INPUT1
+
+CHECK:
+    MOV AL,[SI-1]
+    AND AL,0FH
+    MOV BL,2
+    DIV BL
+    
+    CMP AH,0
+    JE EVEN1
+    JMP ODD1
+    
+EVEN1:
+    MOV AH,9
+    LEA DX,EVEN
+    INT 21H
+    JMP EXIT
+
+ODD1:
+    MOV AH,9
+    LEA DX,ODD
+    INT 21H
+    
+EXIT:
+    
+    MOV AH,4CH
+    INT 21H
+
+    MAIN ENDP
+END MAIN
+

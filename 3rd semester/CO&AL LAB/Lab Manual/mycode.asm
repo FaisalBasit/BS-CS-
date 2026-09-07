@@ -1,0 +1,54 @@
+ADDITION MACRO BASIC, OVERTIME, BONUS
+    MOV AX,BASIC
+    MOV BX,OVERTIME
+    MOV CX,BONUS
+    ADD AX,BX
+    ADD AX,CX
+ENDM
+
+TITLE LAB 12 ACTIVITY 4
+.MODEL SMALL
+.STACK 100H
+.DATA  
+
+SALARY1 DW ?
+SALARY2 DW ?
+SALARY3 DW ?
+
+.CODE
+
+MAIN PROC
+    MOV AX,@DATA
+    MOV DS,AX
+    
+   
+    
+    ADDITION 60000,2500,3000
+    MOV SALARY1,AX
+    
+    ADDITION 45000,1000,500
+    MOV SALARY2,AX
+    
+    ADDITION 1000,500,100
+    MOV SALARY3,AX        
+    
+    
+
+;OUTPUT:    
+;    
+;    INC SI
+;    
+;    MOV AH,2
+;    MOV AL,[SI]
+;    INT 21H    
+;    
+;    CMP AL,24
+;    JNE OUTPUT
+    
+    
+    
+    MOV AH, 4CH
+    INT 21H
+    
+    MAIN ENDP
+END MAIN
