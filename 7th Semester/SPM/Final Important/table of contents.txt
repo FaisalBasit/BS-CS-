@@ -1,0 +1,15 @@
+📋 Table of Contents
+
+1.	Selenium Testing
+2.	Scrum and Agile
+3.	Project Code Estimation (COCOMO)
+4.	Procurement Contracts
+5.	Responsibilities of Project Manager
+6.	Quality Management
+7.	Configuration Management
+8.	Earned Value Management (EVM)
+9.	Communication Management
+10.	Motivation Theories (Maslow & Herzberg)
+11.	Project Cost Management
+12.	Stakeholder Register
+13.	Organizational Structure

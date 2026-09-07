@@ -1,0 +1,58 @@
+flowchart TD
+  %% Color definitions for clarity
+  classDef start fill:#dfeeff,stroke:#2b6cb0,stroke-width:1px,color:#000;
+  classDef enrichment fill:#fff4e6,stroke:#ff8c00,stroke-width:1px,color:#000;
+  classDef completed fill:#f3e8ff,stroke:#7c3aed,stroke-width:1px,color:#000;
+  classDef classification fill:#fff7ed,stroke:#f59e0b,stroke-width:1px,color:#000;
+  classDef ready fill:#e6f7ff,stroke:#1e40af,stroke-width:1px,color:#000;
+  classDef action fill:#ffffff,stroke:#374151,stroke-width:1px,color:#000;
+  classDef follow fill:#ecfccb,stroke:#16a34a,stroke-width:1px,color:#000;
+  classDef finalWarm fill:#d1fae5,stroke:#059669,stroke-width:1px,color:#000;
+  classDef finalCold fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#000;
+  classDef skipped fill:#f3f4f6,stroke:#9ca3af,stroke-width:1px,color:#000;
+  classDef unsub fill:#f8fafc,stroke:#94a3b8,stroke-width:1px,color:#000;
+
+  New["New"]:::start --> PendingApollo["Pending Apollo<br>(enrichment needed)"]:::enrichment
+  New --> Unsub["Unsubscribed<br>(via webhook)"]:::unsub
+
+  PendingApollo --> Completed["Completed / No Email / Manual Research<br>(completed alternatives)"]:::completed
+  Completed --> PendingClassification["Pending Classification<br>(needs tier assignment)"]:::classification
+  PendingClassification --> Ready["Ready for Outreach<br>(has email + assigned)"]:::ready
+
+  Ready --> EmailSent["Email Sent<br>(Day 0)"]:::action
+  EmailSent --> Follow1["Follow-Up 1<br>(Day 3)"]:::follow
+  Follow1 --> Follow2["Follow-Up 2<br>(Day 7)"]:::follow
+  Follow2 --> Follow3["Follow-Up 3<br>(Day 14)"]:::follow
+
+  Follow3 --> WarmFinal["Warm — Email Opened"]:::finalWarm
+  Follow3 --> ColdFinal["Cold — No Response"]:::finalCold
+
+  Follow2 --> Warm2["Warm — Email Opened"]:::finalWarm
+  Follow1 --> Warm1["Warm — Email Opened"]:::finalWarm
+  EmailSent --> EmailFailed["Email Failed"]:::finalCold
+  Ready --> Skipped["Skipped — No Email"]:::skipped
+
+  %% Unsubscribe can happen at multiple points (after send or from ready state)
+  EmailSent --> Unsub
+  Follow1 --> Unsub
+  Follow2 --> Unsub
+  Follow3 --> Unsub
+
+  %% Explicit per-node styles to ensure rendering in environments where classDef may be ignored
+  style New fill:#dfeeff,stroke:#2b6cb0,stroke-width:1px
+  style PendingApollo fill:#fff4e6,stroke:#ff8c00,stroke-width:1px
+  style Completed fill:#f3e8ff,stroke:#7c3aed,stroke-width:1px
+  style PendingClassification fill:#fff7ed,stroke:#f59e0b,stroke-width:1px
+  style Ready fill:#e6f7ff,stroke:#1e40af,stroke-width:1px
+  style EmailSent fill:#ffffff,stroke:#374151,stroke-width:1px
+  style Follow1 fill:#ecfccb,stroke:#16a34a,stroke-width:1px
+  style Follow2 fill:#ecfccb,stroke:#16a34a,stroke-width:1px
+  style Follow3 fill:#ecfccb,stroke:#16a34a,stroke-width:1px
+  style WarmFinal fill:#d1fae5,stroke:#059669,stroke-width:1px
+  style ColdFinal fill:#fee2e2,stroke:#dc2626,stroke-width:1px
+  style EmailFailed fill:#fee2e2,stroke:#dc2626,stroke-width:1px
+  style Skipped fill:#f3f4f6,stroke:#9ca3af,stroke-width:1px
+  style Unsub fill:#f8fafc,stroke:#94a3b8,stroke-width:1px
+
+  %% layout hint: group the main flow vertically for readability
+  %% (mermaid will handle spacing; these comments are for maintainers)
