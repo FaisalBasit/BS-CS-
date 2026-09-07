@@ -1,0 +1,34 @@
+STSEG SEGMENT
+    DB 32 DUP(?)
+STSEG ENDS
+
+DTSEG SEGMENT
+     
+     STR1 DB "SHAKIR$"      ; $ IS USED AS END OF LINE MARKER
+
+DTSEG ENDS
+
+
+
+CDSEG SEGMENT
+    MAIN PROC
+        
+        ASSUME SS: STSEG, DS:DTSEG, CS:CDSEG
+    
+    MOV AX, DTSEG
+    MOV DS, AX
+    
+
+
+    MOV DX, OFFSET STR1		;LEA DX, STR1
+        MOV AH, 9
+        INT 21H        
+
+
+    
+    MOV AH, 4CH
+    INT 21H
+
+MAIN ENDP
+CDSEG ENDS
+END MAIN
