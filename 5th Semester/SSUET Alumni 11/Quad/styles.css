@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero-banner {
+    background: url('images/hero-banner.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-banner p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-banner button {
+    padding: 10px 20px;
+    background: #6b3590;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.hero-banner button:hover {
+    background: #4e2570;
+}
+
+.featured-stories, .alumni-insights, .resources {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured-stories h2, .alumni-insights h2, .resources h2 {
+    margin-bottom: 20px;
+    color: #6b3590;
+}
+
+.stories-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.story {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.story h3 {
+    font-size: 1.2em;
+    color: #6b3590;
+    margin-bottom: 10px;
+}
+
+.story a {
+    color: #3ab549;
+    text-decoration: none;
+}
+
+.insights-list article {
+    margin: 20px 0;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources li {
+    margin: 10px 0;
+}
+
+.resources a {
+    color: #3ab549;
+    text-decoration: none;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
