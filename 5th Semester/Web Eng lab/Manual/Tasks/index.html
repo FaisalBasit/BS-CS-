@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Product Catalog</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    <div class="filters">
+        <label><input type="checkbox" value="Electronics" class="filter-checkbox"> Electronics</label>
+        <label><input type="checkbox" value="Clothing" class="filter-checkbox"> Clothing</label>
+        <label><input type="checkbox" value="Home" class="filter-checkbox"> Home</label>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

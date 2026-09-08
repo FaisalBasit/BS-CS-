@@ -1,0 +1,47 @@
+import React, { useState } from 'react';
+import './App.css';
+
+const students = [
+  { name: "Alice", age: 20, skills: ["JavaScript", "React", "CSS"] },
+  { name: "Bob", age: 22, skills: ["Java", "Spring Boot", "SQL"] },
+  { name: "Charlie", age: 21, skills: ["Python", "Django", "Data Analysis"] },
+];
+
+const App = () => {
+  return (
+    <div>
+      <h1>Student Information App</h1>
+      <StudentList />
+    </div>
+  );
+};
+
+const StudentList = () => {
+  const [showMore, setShowMore] = useState(Array(students.length).fill(false));
+
+  const toggleShowMore = (index) => {
+    const updatedShowMore = [...showMore];
+    updatedShowMore[index] = !updatedShowMore[index];
+    setShowMore(updatedShowMore);
+  };
+
+  return (
+    <div>
+      {students.map((student, index) => (
+        <div key={index} style={{ marginBottom: "20px" }}>
+          <h3>{student.name}</h3>
+          <p>Age: {student.age}</p>
+          {showMore[index] && (
+            <p>Skills: {student.skills.join(", ")}</p>
+          )}
+          <button onClick={() => toggleShowMore(index)}>
+            {showMore[index] ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default App;
+

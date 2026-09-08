@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Task - Even or Odd</title>
+</head>
+<body>
+    <h1>Even or Odd Checker</h1>
+    <button onclick="checkEvenOdd()">Check Number</button>
+    <script>
+        // Function to check if a number is even or odd
+        function checkEvenOdd() {
+            const userInput = prompt("Enter a number:");
+            const number = parseInt(userInput);
+
+            // Validate the input
+            if (isNaN(number)) {
+                alert("Please enter a valid number.");
+            } else {
+                if (number % 2 === 0) {
+                    alert(`The number ${number} is Even.`);
+                } else {
+                    alert(`The number ${number} is Odd.`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Task</title>
+    <style>
+        #contentArea {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1 id="headerText">Header Section</h1>
+        <button onclick="updateHeaderText()">Update Header</button>
+    </header>
+
+    <section id="contentArea">
+        <h2>Content Area</h2>
+        <p>This is the main content area of the webpage.</p>
+        <label for="colorSelector">Change Background Color:</label>
+        <select id="colorSelector" onchange="changeBackgroundColor()">
+            <option value="#f9f9f9">Default</option>
+            <option value="#ffcccc">Light Red</option>
+            <option value="#ccffcc">Light Green</option>
+            <option value="#ccccff">Light Blue</option>
+        </select>
+    </section>
+    <script>
+        // Update header text dynamically
+        function updateHeaderText() {
+            document.getElementById("headerText").textContent = "Updated Header Text!";
+        }
+
+        // Change background color of content area
+        function changeBackgroundColor() {
+            const selectedColor = document.getElementById("colorSelector").value;
+            document.getElementById("contentArea").style.backgroundColor = selectedColor;
+        }
+
+        // Add a new footer dynamically after 5 seconds
+        window.onload = function () {
+            setTimeout(() => {
+                const newFooter = document.createElement("footer");
+                newFooter.textContent = "This is a dynamically added footer.";
+                document.body.appendChild(newFooter);
+            }, 5000);
+        };
+    </script>
+</body>
+</html>

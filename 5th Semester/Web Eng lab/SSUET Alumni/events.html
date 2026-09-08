@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSUET Alumni - Quad News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sintony:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <!-- Top Navbar Section -->
+        <div id="top" class="top-navbar">
+            <div class="social-links">
+                <a href="#" target="_blank"><img src="Images/linkedin.png" alt="LinkedIn"></a>
+                <a href="#" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="Images/facebook.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="Images/instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="top-links">
+                <a href="Login.html" class="desktop-link">My SSUET Online Log-in</a>
+                <a href="Login.html" class="mobile-link" >Log-in</a>
+                <a href="#">FAQ</a>
+                <a href="#">ssuet.edu.pk</a>
+                <a href="#"><img src="Images/logout.png" alt="Log Out"></a>
+            </div>
+        </div>
+
+        <!-- Main Navbar Section -->
+        <div class="main-navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Images/f3-01.png" alt="SSUET Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="news.html">Quad News</a></li>
+                <li><a href="my_ssuet.html">My SSUET</a></li>
+                <li><a href="new_alumni.html">New Alumni</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="groups.html">Alumni Groups</a></li>
+                <li><a href="engage.html">Engage</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Image -->
+    <div class="header-image">
+        <img src="Images/events2-02.png" alt="News Header">
+    </div>
+    <section class="events-section">
+        <!-- Upcoming Events -->
+        <h1 class="events-title">Upcoming Events</h1>
+        <div class="events-grid">
+            <!-- Event 1 -->
+            <div class="event-card upcoming">
+                <div class="event-image">
+                    <img src="Images/e1.jpg" alt="Tech Conference 2024">
+                </div>
+                <div class="event-details">
+                    <h2>Tech Conference 2024</h2>
+                    <p class="event-date">March 12, 2025</p>
+                    <p class="event-description">
+                        Explore groundbreaking technology trends and innovations during Tech Conference 2025, an event showcasing the latest advancements in the industry.
+                    </p>
+                    <a href="#" class="event-button">Learn More</a>
+                </div>
+            </div>
+    
+            <!-- Event 2 -->
+            <div class="event-card upcoming">
+                <div class="event-image">
+                    <img src="Images/se (1).png" alt="Startup Expo">
+                </div>
+                <div class="event-details">
+                    <h2>Startup Expo</h2>
+                    <p class="event-date">August 30, 2025</p>
+                    <p class="event-description">
+                        Meet aspiring entrepreneurs at this expo designed to provide a platform for showcasing innovative startups and groundbreaking business ideas creatively.
+                    </p>
+                    <a href="#" class="event-button">Learn More</a>
+                </div>
+            </div>
+    
+            <!-- Event 3 -->
+            <div class="event-card upcoming">
+                <div class="event-image">
+                    <img src="Images/smec.jpg" alt="Smec">
+                </div>
+                <div class="event-details">
+                    <h2>SMEC’25</h2>
+                    <p class="event-date">January 22, 2025</p>
+                    <p class="event-description">
+                        Speed Mind Execution Competition (SMEC’25) will be held to provide an opportunity to young and talented students to showcase their soft skills in a more challenging manner. 
+                    </p>
+                    <a href="#" class="event-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Events Held Before -->
+        <h1 class="events-title">Events Held Before</h1>
+        <div class="events-grid">
+            <!-- Event 1 -->
+            <div class="event-card held">
+                <div class="event-image">
+                    <img src="Images/at.png" alt="Tech Meetup 2023">
+                </div>
+                <div class="event-details">
+                    <h2>Alumni Talk 2024</h2>
+                    <p class="event-date">August 15, 2024</p>
+                    <p class="event-description">
+                        Sir Syed University's Alumni Talk was a great success! Thanks to our alumni for sharing their insights, inspiring our CS and IT students, and bridging academics with the tech industry.
+                    </p>
+                    <a href="#" class="event-button">View Highlights</a>
+                </div>
+            </div>
+    
+            <!-- Event 2 -->
+            <div class="event-card held">
+                <div class="event-image">
+                    <img src="Images/mhd.png" alt="Mental Health Day camp">
+                </div>
+                <div class="event-details">
+                    <h2>Mental Health Day camp</h2>
+                    <p class="event-date">July 10, 2023</p>
+                    <p class="event-description">
+                        The Department of Psychology organized a successful Mental Health Day Camp, offering workshops, counseling, and stress management activities to promote mental well-being.
+                    </p>
+                    <a href="#" class="event-button">View Highlights</a>
+                </div>
+            </div>
+    
+            <!-- Event 3 -->
+            <div class="event-card held">
+                <div class="event-image">
+                    <img src="Images/ww.png" alt="Cultural Day 2023">
+                </div>
+                <div class="event-details">
+                    <h2>Alumni Insights: Civil Engineering Batch 2014 </h2>
+                    <p class="event-date">June 5, 2023</p>
+                    <p class="event-description">
+                        Thanks to Zulqarnain Haider and Ikram Arif for sharing their inspiring career insights. Special thanks to Sir Siraj Khilji for his support.
+                    </p>
+                    <a href="#" class="event-button">View Highlights</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h4>About SSUET Alumni</h4>
+                <p>A platform to connect, collaborate, and celebrate the achievements of Sir Syed University of Engineering and Technology alumni.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-alumni">
+                <h4>Information for Alumni</h4>
+                <ul>
+                    <li><a href="#login">Login/Register</a></li>
+                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#update-details">Update Your Details</a></li>
+                    <li><a href="#certificates">Degree Certificates and Ceremonies</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:alumni@ssuet.edu.pk">alumni@ssuet.edu.pk</a></p>
+                <p>Phone: +92-21-12345678</p>
+                <p>Address: Sir Syed University, Karachi, Pakistan</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SSUET Alumni. All rights reserved.</p>
+        </div>
+    </footer>
+
+        <script src="script.js"></script>
+</body>
+</html>

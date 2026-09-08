@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "price": "$1000",
+      "description": "High-performance laptop"
+    },
+    {
+      "id": "2",
+      "name": "Phone",
+      "price": "$500",
+      "description": "Smartphone with a great camera"
+    },
+    {
+      "id": "e78d",
+      "name": "Football",
+      "price": "$200",
+      "description": "Made in Sialkot"
+    }
+  ]
+}

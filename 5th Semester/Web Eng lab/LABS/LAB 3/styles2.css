@@ -1,0 +1,23 @@
+#name-heading {
+    font-family: Arial, sans-serif;
+    color: #004080;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+.hobby-heading {
+    font-family: Verdana, sans-serif;
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.skills-list ,.abc {
+    font-family: Georgia, serif;
+    color: blue;
+    list-style-type: square;
+    margin: 20px;
+    padding: 0;
+}
+.skills-list li {
+    margin-bottom: 5px;
+}

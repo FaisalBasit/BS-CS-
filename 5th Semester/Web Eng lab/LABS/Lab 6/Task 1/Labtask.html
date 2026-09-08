@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task - JavaScript Webpage</title>
+</head>
+<body>
+    <h1>JavaScript Webpage</h1>
+    <h2>Form for Personalized Greeting</h2>
+    <form onsubmit="event.preventDefault(); displayGreeting();">
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" id="nameInput" placeholder="Your name">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="greetingMessage" style="font-weight: bold; color: green;"></p>
+    <script src="labtask.js"></script>
+</body>
+</html>

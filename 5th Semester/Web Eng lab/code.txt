@@ -1,0 +1,17 @@
+DESKTOP-LRGEC42\SQLEXPRESS
+
+Scaffold-Dbcontext  "server=DESKTOP-LRGEC42\SQLEXPRESS; database=MyDB; trusted_connection=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+"ConnectionStrings": {
+    "dbcs": "server=DESKTOP-LRGEC42\\SQLEXPRESS; database=MyDB; trusted_connection=true"
+}
+
+using LoginFormASPCore6.Models;
+
+var provider = builder.Services.BuildServiceProvider();
+var config = provider.GetRequiredService<IConfiguaration>();
+builder.Services.AddDbContext<MyDBContext>(item => item.UseSqlServer(config.GetConnectionString("dbcs"))); 
+
+
+var myUser = context.UserTbls.Where(x => x.Email == user.Email && x.Password == user.Password).Firs 

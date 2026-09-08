@@ -1,0 +1,26 @@
+﻿@model IEnumerable<LabWebApi.Models.Student>
+
+<h2>Student List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>StudentId</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <a href="/Student/Create" >Add New Student</a>
+    <a href="/Student/StudentsOlderThan" >View Students Older Than 18</a>
+</p>

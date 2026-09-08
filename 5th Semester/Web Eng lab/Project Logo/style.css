@@ -1,0 +1,26 @@
+.navbar {
+    background-color: #6c2c91;
+  }
+  .navbar .nav-link {
+    color: white;
+    font-weight: bold;
+  }
+  .navbar .nav-link:hover {
+    color: #d1d1d1;
+  }
+  .navbar-brand img {
+    height: 50px;
+  }
+  .sub-navbar {
+    background-color: #46a047;
+  }
+  .sub-navbar .nav-link {
+    color: white;
+  }
+  .sub-navbar .nav-link:hover {
+    color: #d1d1d1;
+  }
+  .navbar-search input {
+    border-radius: 20px;
+    padding: 5px 10px;
+  }

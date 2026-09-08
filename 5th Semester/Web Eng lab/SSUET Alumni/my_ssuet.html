@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My SSUET - Personalized Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Section Styles */
+        section {
+            padding: 40px 0;
+        }
+
+        /* Header Section */
+        .header-section {
+            background-color: #f0f0f0;
+            padding: 60px 0;
+            margin-top: 130px;
+        }
+
+        .header-content-container {
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .header-content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* My SSUET Dashboard */
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 15%;
+        }
+
+        .dashboard-section {
+            width: 30%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dashboard-section ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-section ul li a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+
+        .dashboard-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            margin-top: 20px;
+        }
+
+        .profile-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 10%;
+        }
+
+        .profile-info img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+
+        .profile-info div {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* News and Events Section */
+        .news-events {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 15%;
+        }
+
+        .news-events div {
+            width: 45%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-events div h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Alumni Section */
+        .alumni-section {
+            background-color: #f0f0f0;
+            padding: 60px 0;
+        }
+
+        .alumni-section h3 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .alumni-network {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 15%;
+        }
+
+        .alumni-network div {
+            width: 45%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+       
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .dashboard, .news-events, .alumni-network {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dashboard-section, .news-events div, .alumni-network div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <!-- Top Navbar Section -->
+            <div id="top" class="top-navbar">
+                <div class="social-links">
+                    <a href="#" target="_blank"><img src="Images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
+                    <a href="#" target="_blank"><img src="Images/facebook.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="Images/instagram.png" alt="Instagram"></a>
+                </div>
+                <div class="top-links">
+                    <a href="#">Log-out</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="header-section">
+        <div class="header-content-container">
+            <div class="header-content">
+                <h1>Welcome to My SSUET</h1>
+                <p>Your personalized dashboard for all things SSUET - from news to alumni networking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard">
+        <div class="dashboard-section">
+            <h3>Account Management</h3>
+            <ul>
+                <li><a href="#">View Profile</a></li>
+                <li><a href="#">Update Information</a></li>
+                <li><a href="#">Change Password</a></li>
+            </ul>
+        </div>
+        <div class="dashboard-section">
+            <h3>Recent News</h3>
+            <ul>
+                <li><a href="#">Upcoming SSUET Symposium</a></li>
+                <li><a href="#">New Research Initiatives</a></li>
+                <li><a href="#">Alumni Meet-Up Announcement</a></li>
+            </ul>
+        </div>
+        <div class="dashboard-section">
+            <h3>Upcoming Events</h3>
+            <ul>
+                <li><a href="#">Tech Talk - Jan 2025</a></li>
+                <li><a href="#">Networking Event - Feb 2025</a></li>
+                <li><a href="#">Graduation Ceremony - Mar 2025</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <h2>Your Profile</h2>
+        <div class="profile-info">
+            <img src="profile-pic.jpg" alt="Profile Picture">
+            <div>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Degree Program:</strong> Computer Science</p>
+                <p><strong>Graduation Year:</strong> 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-events">
+        <div>
+            <h4>Recent News</h4>
+            <p>Stay up-to-date with the latest happenings at SSUET!</p>
+            <ul>
+                <li><a href="#">SSUET Celebrates 25 Years</a></li>
+                <li><a href="#">New Research Fund for Students</a></li>
+                <li><a href="#">SSUET Ranked Among Top Universities</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Upcoming Events</h4>
+            <p>Don’t miss these exciting events!</p>
+            <ul>
+                <li><a href="#">Alumni Networking Night</a></li>
+                <li><a href="#">Annual Research Symposium</a></li>
+                <li><a href="#">Sports Meet - 2025</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="alumni-section">
+        <h3>Alumni Network</h3>
+        <div class="alumni-network">
+            <div>
+                <h4>Join the Alumni Network</h4>
+                <p>Reconnect with fellow SSUET alumni and stay engaged.</p>
+            </div>
+            <div>
+                <h4>Alumni Events</h4>
+                <p>Attend exclusive events designed for SSUET alumni.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h4>About SSUET Alumni</h4>
+                <p>A platform to connect, collaborate, and celebrate the achievements of SSUET alumni.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Alumni Network</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

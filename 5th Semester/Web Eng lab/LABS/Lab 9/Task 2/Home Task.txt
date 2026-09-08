@@ -1,0 +1,61 @@
+// App.js
+import React, { useState } from "react";
+
+const products = [
+  {
+    name: "Laptop",
+    price: "$1000",
+    description: "High-performance laptop",
+    details: "16GB RAM, 1TB SSD, Intel i7 Processor",
+    reviews: ["Excellent product!", "Very fast and reliable."],
+  },
+  {
+    name: "Phone",
+    price: "$500",
+    description: "Smartphone with a great camera",
+    details: "128GB Storage, 48MP Camera, 5G",
+    reviews: ["Great camera quality.", "Battery life could be better."],
+  },
+];
+
+const App = () => {
+  return (
+    <div>
+      <h1>Product Catalog</h1>
+      <ProductList />
+    </div>
+  );
+};
+
+const ProductList = () => {
+  const [showMore, setShowMore] = useState(Array(products.length).fill(false));
+
+  const toggleShowMore = (index) => {
+    const updatedShowMore = [...showMore];
+    updatedShowMore[index] = !updatedShowMore[index];
+    setShowMore(updatedShowMore);
+  };
+
+  return (
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+      {products.map((product, index) => (
+        <div key={index} style={{ border: "1px solid #ddd", padding: "20px" }}>
+          <h3>{product.name}</h3>
+          <p>Price: {product.price}</p>
+          <p>{product.description}</p>
+          {showMore[index] && (
+            <div>
+              <p><strong>Details:</strong> {product.details}</p>
+              <p><strong>Reviews:</strong> {product.reviews.join(" | ")}</p>
+            </div>
+          )}
+          <button onClick={() => toggleShowMore(index)}>
+            {showMore[index] ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default App;

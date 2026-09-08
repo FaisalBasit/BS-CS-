@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task</title>
+    <style>
+        #changeButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lab Task Webpage</h1>
+    <p id="content">This is a sample paragraph.</p>
+    <button id="changeButton" 
+            onclick="changeParagraphContent()" 
+            onmouseover="hoverButton(this)" 
+            onmouseout="unhoverButton(this)">
+        Click Me
+    </button>
+    <script>
+        function changeParagraphContent() {
+            const paragraph = document.getElementById("content");
+            paragraph.textContent = "The content of this paragraph has been changed!";
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = "This is a new paragraph added dynamically.";
+            document.body.appendChild(newParagraph);
+        }
+        function hoverButton(button) {
+            button.style.backgroundColor = "#0056b3";
+        }
+
+        function unhoverButton(button) {
+            button.style.backgroundColor = "#007bff";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+  <a href="https://localhost:7243/Home/Login" class="desktop-link">My SSUET Online Log-in</a>
+  <a href="https://localhost:7243/Home/Login" class="mobile-link" >Log-in</a>
+
+
+
+
+
+public IActionResult Login()
+{
+    if (HttpContext.Session.GetString("UserSession") != null)
+    {
+        return Redirect("https://localhost:7243/SSUET%20Alumni/index.html");
+    }
+    return View();
+}
+[HttpPost]
+public IActionResult Login(UserTbl user)
+{
+    var myUser = context.UserTbls.FirstOrDefault(x => x.UserName == user.UserName && x.Password == user.Password);
+    if (myUser != null)
+    {
+        HttpContext.Session.SetString("UserSession", myUser.UserName);
+        return Redirect("https://localhost:7243/SSUET%20Alumni/index.html"); // Redirect to the static HTML file
+    }
+    else
+    {
+        ViewBag.Message = "Login Failed...";
+    }
+    return View();
+}

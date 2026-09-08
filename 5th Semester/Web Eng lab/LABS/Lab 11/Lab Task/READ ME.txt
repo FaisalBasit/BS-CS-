@@ -1,0 +1,7 @@
+IMPORTANT: Before running the program, please update the database connection string.
+
+Open appsettings.json.
+Update the DefaultConnection string:
+Replace Server=your_server with your SQL Server instance (e.g., DESKTOP-TI3IL06\\SQLEXPRESS).
+Replace Database=your_database with your database name (e.g., LabDatabase).
+Save the file before running the program.

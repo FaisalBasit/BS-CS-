@@ -1,0 +1,15 @@
+﻿@model LabWebApi.Models.Student
+
+<h2>Create Student</h2>
+<form action="/Student/Create" method="post">
+    <div>
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" />
+    </div>
+    <div>
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" />
+    </div>
+    <button type="submit">Save</button>
+</form>
+<p><a href="Index">Back to Student List</a></p>

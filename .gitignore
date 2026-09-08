@@ -24,6 +24,10 @@ old/
 *.exe
 *.ipch
 .vs/
+bin/
+obj/
+*.dll
+*.pdb
 node_modules/
 __pycache__/
 venv/

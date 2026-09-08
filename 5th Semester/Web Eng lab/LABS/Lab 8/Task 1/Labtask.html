@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task - Student List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #studentSection {
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .student {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student List</h1>
+    <button id="toggleButton">Toggle Student List</button>
+    <input type="text" id="searchField" placeholder="Search student by name" style="margin-left: 10px;">
+    <div id="studentSection">
+        <!-- Students will be displayed here -->
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // JSON data
+            const students = [
+                { name: "Alice", age: 20, grade: "A" },
+                { name: "Bob", age: 22, grade: "B" },
+                { name: "Charlie", age: 19, grade: "A+" },
+                { name: "David", age: 21, grade: "B+" },
+            ];
+
+            // Display student list
+            function displayStudents(filter = "") {
+                $("#studentSection").empty();
+                const filteredStudents = students.filter(student => student.name.toLowerCase().includes(filter.toLowerCase()));
+                filteredStudents.forEach(student => {
+                    $("#studentSection").append(
+                        `<div class="student">
+                            <strong>Name:</strong> ${student.name}<br>
+                            <strong>Age:</strong> ${student.age}<br>
+                            <strong>Grade:</strong> ${student.grade}
+                        </div>`
+                    );
+                });
+                if (filteredStudents.length === 0) {
+                    $("#studentSection").append("<p>No students found.</p>");
+                }
+            }
+
+            // Initial display
+            displayStudents();
+
+            // Toggle visibility
+            $("#toggleButton").click(function () {
+                $("#studentSection").fadeToggle();
+            });
+
+            // Search filter
+            $("#searchField").on("input", function () {
+                const searchText = $(this).val();
+                displayStudents(searchText);
+            });
+        });
+    </script>
+</body>
+</html>
