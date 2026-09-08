@@ -1,0 +1,49 @@
+# Core Web
+flask
+gunicorn
+
+# Deep Learning & Image Processing
+tensorflow
+keras
+h5py==3.12.1
+numpy
+pillow
+
+# FastAPI-related (if not used, you can remove)
+fastapi==0.115.6
+uvicorn==0.34.0
+python-multipart==0.0.20
+starlette==0.41.3
+
+# TensorBoard & TF Extras
+tensorboard==2.18.0
+tensorboard-data-server==0.7.2
+absl-py==2.1.0
+protobuf==5.29.2
+grpcio==1.69.0
+google-pasta==0.2.0
+wrapt==1.17.0
+opt_einsum==3.4.0
+tensorflow-io-gcs-filesystem==0.31.0
+
+# Environment, CLI, Requests
+python-dotenv
+requests==2.32.3
+click==8.1.8
+
+# Markdown & Output Formatting
+markdown
+Markdown==3.7
+rich==13.9.4
+Pygments==2.19.1
+
+# Jinja2 Template Engine
+Jinja2==3.1.5
+MarkupSafe==3.0.2
+
+# Miscellaneous (only if used in code)
+certifi
+charset-normalizer
+colorama
+idna
+typing_extensions
