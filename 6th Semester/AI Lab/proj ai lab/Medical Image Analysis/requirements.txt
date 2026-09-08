@@ -1,0 +1,22 @@
+openai-agents
+
+huggingface_hub
+
+# Core Web
+flask
+gunicorn
+
+# Deep Learning & Image Processing
+tensorflow
+keras
+numpy
+pillow
+
+
+# Environment, CLI, Requests
+python-dotenv
+
+# Markdown & Output Formatting
+markdown
+
+asyncio
