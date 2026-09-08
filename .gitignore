@@ -27,7 +27,10 @@ old/
 bin/
 obj/
 *.dll
+*.pyd
 *.pdb
+chest_xray/
+MRI Images/
 node_modules/
 __pycache__/
 venv/
