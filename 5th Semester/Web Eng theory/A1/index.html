@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html en = "lang">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, intial-scale=1.0 ">
+  <title>Employee Data</title>
+
+</head>
+<body>
+  <h2>ABC CORPORATION</h2>
+  <h3>Employees Data</h3>
+  <form>
+    <label for="EmpNo">Emp No</label>
+    <input type="text" id="EmpNo" name="EmpNo" value=""><br>
+
+    <label for="Name">Name</label>
+    <input type="text" id="Name" name="Name" value=""><br>
+    
+    <label for="Grade">Grade</label>
+    <input type="text" id="Grade" name="Grade" value=""><br>
+
+    <label for="Designation">Designation</label>
+    <input type="text" id="Designation" name="Designation" value=""><br>
+
+    <label for="Salary">Salary</label>
+    <input type="text" id="Salary" name="Salary" value=""><br>
+
+    <label for="MobNo">Mob No</label>
+    <input type="text" id="MobNo" name="MobNo" value=""><br>
+
+    <button type="button" id="smtButton" onclick="smtFunction()">Submit</button>
+    <button type="button" id="updButton" onclick="updFunction()">Update</button>
+    <button type="button" id="delButton" onclick="delFunction()">Delete</button>
+  </form>
+  <script>
+    function smtFunction(){
+      var x = document.getElementById("smtButton");
+      alert("Form Submitted!");
+    }
+    function updFunction(){
+      var x = document.getElementById("updButton");
+      alert("Form Updated!");
+    }
+
+    function delFunction(){
+      var x = document.getElementById("delButton"); 
+    }
+  </script>
+</body>
+
+
+
+
+</html>
